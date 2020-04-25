@@ -9,9 +9,17 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Proyecto Prueba</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <form [formGroup]="itemForm">
+    <ion-input placeholder="Nombre" formControlName="nombre"></ion-input>
+    <ion-input placeholder="Apellido" formControlName="apellido"></ion-input>
+    <ion-input placeholder="DNI" formControlName="dni"></ion-input>
+
+    <ion-button color="secondary" (click)="scan()">Scan QR</ion-button>
+  </form>
 
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
